@@ -1,7 +1,7 @@
 //
 //  Point.swift
 //  SierpinskiSwift
-//
+//  By: Vince Biancucci & Nathan Kruger
 //  A tuple representing a basic point in two-dimensional space.
 //
 

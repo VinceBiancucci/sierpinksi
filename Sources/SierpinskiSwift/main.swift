@@ -1,11 +1,11 @@
 //
 //  main.swift
 //  SierpinskiSwift
-//
+//  By: Vince Biancucci & Nathan Kruger
 //  Runs the main sierpinski algorithm.
 
 import SVGLibrary
-
+import Foundation
 // Draw a triangle by drawing three lines in black
 func draw_triangle(p1: Point, p2: Point, p3: Point, figure: SVG) {
     figure.draw_line(x1: p1.x, y1: p1.y, x2: p2.x, y2: p2.y, color: "black");
@@ -30,8 +30,10 @@ func main() {
     let p1: Point = (0, 300)
     let p2: Point = (150, 0)
     let p3: Point = (300, 300)
-    sierpinski(p1: p1, p2: p2, p3: p3, level: 5, figure: figure)
-    figure.write(filePath: "sierpinski.svg")
+   // create path for new svg file
+   let path = "file://" + FileManager.default.currentDirectoryPath + "/sierpinski.svg"
+   sierpinski(p1: p1, p2: p2, p3: p3, level: 5, figure: figure)
+   figure.write_graphics(filePath: path)
 }
 
 main()
